@@ -1,0 +1,10 @@
+# compiled output
+dist
+/node_modules
+**/*.gql
+
+# OS
+.DS_Store
+
+# IDEs and editors
+/.idea
