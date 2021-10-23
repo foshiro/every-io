@@ -1,6 +1,7 @@
 import { Prop, SchemaFactory, Schema } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
 import { TaskStatusEnum } from '../interfaces/TaskStatusEnum';
+import { ITask } from '../interfaces/Task.interface';
 
 export type TaskDocument = Task & Document;
 
@@ -22,7 +23,7 @@ export type TaskDocument = Task & Document;
 		},
 	},
 })
-export class Task {
+export class Task implements ITask {
 	@Prop({ required: true })
 	title: string;
 

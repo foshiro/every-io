@@ -6,7 +6,7 @@ import { MongooseModule } from "@nestjs/mongoose";
 
 @Module({
 	imports: [
-		MongooseModule.forRoot('mongodb://localhost/every'),
+		MongooseModule.forRoot('mongodb://mongodb:27017/every'),
 		GraphQLModule.forRoot({
 			autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
 		}),
